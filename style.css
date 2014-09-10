@@ -1,0 +1,33 @@
+body {
+	background-color: black;
+	color: green;
+	font-family: monospace;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+div {
+	overflow-y: scroll;
+	word-wrap: break-word;
+	width: 100%;
+	height: 100%;
+	white-space: pre-wrap;
+}
+
+div:after {
+	content: "_";
+	color: rgba(0,0,0,0);
+	background-color: green;
+	-webkit-animation: blink 0.5s linear infinite;
+	-moz-animation: blink 0.5s linear infinite;
+	animation: blink 0.5s linear infinite;
+}
+
+@keyframes blink {  
+	0% { background-color: green; }
+	50% { background-color: black; }
+}
+@-webkit-keyframes blink {
+	0% { background-color: green; }
+	50% { background-color: black; }
+}
