@@ -1,3 +1,4 @@
+(function(){
 function makeCallback(f) {
 	var m = curproc;
 	return function () {
@@ -555,6 +556,8 @@ for (prop in window) {
 }
 donotoverwrite.syscalls = {};
 for (prop in syscalls) {
-	donotoverwrite.syscalls[prop] = syscalls[prop];
+	donotoverwrite.syscalls[prop] = syscalls[prop].bind({});
 }
 donotoverwrite.JSON = JSON;
+
+})();
